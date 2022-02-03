@@ -1,0 +1,24 @@
+.comingSoon {
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+
+  &__img {
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
+  p, a {
+    font-size: 2.4rem;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  a {
+    color: #0099D9
+  }
+}

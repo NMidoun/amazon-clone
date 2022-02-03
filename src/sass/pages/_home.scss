@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+
+.home {
+	max-width: 1500px;
+	margin-inline: auto;
+	position: relative;
+
+	&__banner {
+		display: none;
+	}
+	
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	@media (min-width: 43em) {
+		&__container {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+  }
+	
+	@media (min-width: 64em) {
+		&__banner {
+			display: inline;
+			width: 100%; 
+			mask-image: linear-gradient(black 50%, transparent);
+		}
+		
+		&__container {
+			position: absolute;
+			top: 41.6%;
+			padding-inline: 20px;
+		}
+	}
+
+}

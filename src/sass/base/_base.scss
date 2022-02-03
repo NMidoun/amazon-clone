@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #{$bg-color};
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 0
+}
+
+
+.link {
+  color: $color-link;
+  font-size: 1.3rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link--relative {
+  position: relative;
+  top: 2px
+}
+
+.link--redirect {
+  position: relative;
+  top: 4px;
+  font-size: 1.4rem;
+}

@@ -1,0 +1,89 @@
+@use '../abstracts' as *;
+
+.subtotal {
+  max-height: 250px;
+  font-size: 1.8rem;
+  text-align: center;
+
+  &--align {
+		display: none;
+		border-top: 1px solid rgba(0, 0, 0, 0.3);
+		padding: 5px 0 15px 0;
+		font-size: 1.8rem;
+		text-align: right;
+  }
+
+  &__container {
+		position: relative;
+		padding-left: 28px;
+  }
+	
+  &__info {
+		display: inline-block;
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		text-align: left;
+		margin-bottom: 20px;
+		text-align: center;
+		
+		&--success {
+			color: #067D62;
+			position: relative;
+		}
+
+		&--success::before {
+			content: '';
+			position: absolute;
+			left: -25px;
+			margin-right: -10px;
+			background-image: url("https://m.media-amazon.com/images/S/sash/3-fm1Jbg4IHlyhq.png");
+			background-position: -457px -144px;
+			height: 18px;
+			width: 18px;
+		}
+  }
+	
+	&__price {
+		margin-bottom: 5px;
+	}
+	
+	&__price--margin {
+		margin-left: -7px;
+	}
+
+	&__price ~ label {
+		position: relative;
+		top: -1px;
+		left: 5px;
+		font-size: 1.4rem;
+	}
+
+  &__proceed {
+		width: 100%;
+		margin-top: 15px;
+		padding: 0.7rem 0.9rem;
+		font-size: 1.3rem;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 8px;
+		background-color: $btnCart-bgColor;
+		box-shadow: $btn-boxShadow;
+		cursor: pointer;
+
+		&:hover {
+				background-color: $btnCart-hoverColor;
+		}
+  }
+
+  @media (min-width: 49.25em) {
+    &--align {
+        display: block;
+				padding-bottom: 0;
+    }
+  }
+
+	@media (min-width: 64em) {
+		&__info {
+			text-align: left;
+		}
+	}
+}

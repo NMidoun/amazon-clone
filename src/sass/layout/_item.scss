@@ -1,0 +1,171 @@
+@use '../abstracts' as *;
+
+.item {
+	padding-block: 15px;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	position: relative;
+	text-align: center;
+	
+	&__actions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+	}
+	
+	&__delete {
+		margin-left: 10px;
+		padding-left: 10px;
+		border-left: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+  &__extra {
+		margin-bottom: 10px;
+
+		p, label, a {
+			position: relative;
+			top: -2px;	
+			font-size: 1.2rem;
+		}
+
+		input, label {
+			margin-top: 5px;
+		}
+
+		a, label {
+			margin-left: 5px;
+		}
+
+		p {
+			color: $green;
+			margin-top: 11px;
+			margin-bottom: 2px;
+		} 
+  }
+
+  &__image {
+		width: 10em;
+  }
+
+	&__price {
+		position: absolute;
+		top: 15px;
+		right: 0;
+		font-size: 1.7rem;
+
+		@media (min-width: 320px) and (max-width: 400px) {
+			position: inherit;
+			margin-bottom: 30px;
+			font-size: 1.8rem;
+		}
+	}
+
+	&__quantity {
+		position: relative;
+	}
+
+	&__quantity__value,
+	&__quantity__value--margin {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 6em;
+		text-align: left;
+		font-size: 1.35rem;
+		background-color: transparent;
+		border-radius: 10px;
+		pointer-events: none;
+		z-index: 100;
+		
+		&::after {
+			content: url('../components/Checkout/arrow.png');
+			top: -8px;
+			position: absolute;
+			transform: scale(0.5);
+		}
+	}
+	
+	&__quantity__value {
+		padding-left: 10px;
+		
+		&::after {
+			right: 8px;
+		}
+	}
+	
+	&__quantity__value--margin {
+		padding-left: 8px;
+
+		&::after {
+			right: 2px;
+		}
+	}
+	
+	&__quantity > select {
+		padding: 0.45em 0.5em;
+		width: 5.5em;
+		font-size: 0.9em;
+		color: transparent;
+		background-color: rgba(#E3E6E6, 0.5);
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		
+		&:active {
+			box-shadow: 0 0 2px 3px #C0EAF1;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: $bg-color;
+		}
+
+		> option {
+			color: black;
+			background-color: #fff;
+		}
+	}
+
+  &__title {
+		margin-block: 7px;
+  }
+
+  @media (min-width: 788px) {
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 15px;
+
+		&__actions {
+			justify-content: start;
+		}
+
+		&__extra p {
+			margin-top: 10px;
+		}
+
+    &__image {
+			float: left;
+			height: 180px;
+			object-fit: contain;
+			margin: 0 20px 0 0;
+    }
+
+    &__title {
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			max-width: 90%;
+			font-size: 1.8rem;
+    }
+
+		&__price {
+			position: initial;
+			margin-top: 0;
+			float: right;
+			margin-left: 30px;
+		}
+  }
+}
+
+

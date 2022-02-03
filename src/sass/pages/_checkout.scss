@@ -1,0 +1,167 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.checkout {
+    padding: 10px;
+
+    &__ad,
+    &__sub-container,
+    &__connect,
+    &__blank {
+        background-color: #fff;
+    }
+
+    &__ad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: clamp(0.5rem, 1vw, 1.5rem);
+        cursor: pointer;
+    }
+    
+    &__ad__button {
+        display: none;
+        padding: 0.7rem 0.9rem;
+        font-size: 1.4rem;
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    
+    &__ad__button:hover {
+        background-color: rgba($bg-color,0.3);
+    }
+    
+    &__ad__content {
+        font-size: 1.4rem;
+        margin: 0 10px;
+        line-height: 1.3em;
+    }
+
+    &__ad__image {
+        width: 9rem;
+    }
+    
+    &__blank {
+        min-height: 60px;
+        margin-top: 10px;
+    }
+    
+    &__sub-container {
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    &__cart {
+        @media (min-width: 33.125em) {
+            text-align: inherit;
+        }
+    }
+
+    &__cart__image {
+        display: none;
+        float: left;
+        margin-right: 10px;
+
+        @media (min-width: 33.125em) {
+            display: inline;
+            width: 17rem;
+        }
+    }
+    
+    &__cart__p {
+        margin-bottom: 5px;
+        text-align: right;
+        font-size: 1.2rem;
+        color: #565959;
+    }
+
+    &__cart__title {
+        font-size: clamp(2.1rem, 1.5vw, 2.8rem);
+        margin: 0;
+    }
+
+    &__connect {
+        min-width: 215px;
+        padding: 0.5em;
+        color: #111;
+        font-size: clamp(1.4rem, 1vw, 1.6rem);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-shadow: $btn-boxShadow;
+        cursor: pointer;
+    }
+
+    &__connect--signIn {
+        background-color: $btnCart-bgColor;
+        margin: 20px 10px 0 0;
+
+        &:hover {
+            background-color: $btnCart-hoverColor;
+        }
+    }
+
+    &__connect--signUp {
+        margin: 7px 10px 0 0;
+    }
+
+    &__connect--signUp:hover {
+        background-color: rgba($bg-color, 0.2);
+    }
+
+    &__warning {
+        font-size: 1.2rem;
+
+        p:first-child {
+            margin: 10px 0 5px 0;
+        }
+    }
+
+    @media (min-width: 64em) {
+        display: grid;
+        grid-template-columns: 1fr 35rem;
+        grid-template-areas: 
+                    'ad      subtotal'
+                    'cart    subtotal'
+                    'blank   .       '
+                    'warning .       ';
+        padding: 18px;
+
+        &__ad {
+            grid-area: ad; 
+            max-width: 72.6rem;
+        }
+
+        &__adButton {
+            display: block;
+        }
+
+        &__blank {
+            grid-area: blank;
+        }
+
+        &__cart {
+            grid-area: cart;
+        }
+
+        &__cart__image {
+            margin-bottom: 12px;
+            width: clamp(12rem, 24%, 60rem);
+        }
+
+        &__subtotal {
+            grid-area: subtotal;
+            margin-left: 20px;
+        }
+            
+        &__warning {
+            grid-area: warning;
+        }
+    }
+}
+

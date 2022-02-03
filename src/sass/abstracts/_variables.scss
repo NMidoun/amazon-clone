@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Regular font family
+$text-font-stack: 'AmazonEmber', Arial, sans-serif !important;
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Colors
+$bg-color: rgb(234, 237, 237);
+$text-color: rgb(34, 34, 34) !default;
+$btnCart-bgColor: #FFD814;
+$btnCart-hoverColor: #F7CA00;
+$color-link: #0066c0;
+$green: #007600;
+
+/// Shadows
+$btn-boxShadow: 0 2px 5px 0 rgb(213 217 217 / 50%);

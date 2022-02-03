@@ -1,0 +1,43 @@
+/**
+ * Basic typography style for copy text
+ */
+@use '../abstracts' as *;
+
+@font-face {
+    font-family: 'AmazonEmber';
+    src:
+      local('Amazon Ember'),
+      local('AmazonEmber'), 
+      url('../fonts/AmazonEmber_W_Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmazonEmber';
+    src:
+      local('Amazon Ember'),
+      local('AmazonEmber'),  
+      url('../fonts/AmazonEmber_W_Bd.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmazonEmber';
+    src:
+      local('Amazon Ember'),
+      local('AmazonEmber'),  
+      url('../fonts/AmazonEmber_W_HeIt.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+  color: $text-color;
+  font-family: $text-font-stack;
+}
+
+code {
+  font-family: $code-font-stack;
+}
